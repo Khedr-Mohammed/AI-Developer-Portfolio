@@ -1,0 +1,14 @@
+[2026.10.25 04:13:37] Launched version: 7001001, install beta: [FALSE], alpha: 0, debug mode: [FALSE]
+[2026.10.25 04:13:37] Executable dir: C:/Users/HP/Desktop/, name: Telegram.exe
+[2026.10.25 04:13:37] Initial working dir: C:/Users/HP/Desktop/
+[2026.10.25 04:13:37] Working dir: C:/Users/HP/Desktop/
+[2026.10.25 04:13:37] Command line: C:\Users\HP\Desktop\Telegram.exe
+[2026.10.25 04:13:37] Executable path before check: C:/Users/HP/Desktop/Telegram.exe
+[2026.10.25 04:13:37] Logs started
+[2026.10.25 04:13:37] WinRT Supported: [TRUE]
+[2026.10.25 04:13:37] AppUserModelID: Telegram.TelegramDesktop.0a71f9b33e1b286bf6d616dd20a127ac
+[2026.10.25 04:13:37] Using DirectX compiler 'C:\Users\HP\Desktop\modules\x64\d3d\d3dcompiler_47.dll'.
+[2026.10.25 04:13:37] Connecting local socket to Global\16804ca8bb166c52a8b46830ee70159f-{87A94AB0-E370-4cde-98D3-ACC110C5967D}...
+[2026.10.25 04:13:37] Socket connected, this is not the first application instance, sending show command...
+[2026.10.25 04:13:37] Show command written, waiting response...
+[2026.10.25 04:13:37] Show command response received, processId = 12100, windowId = 1837490, activating and quitting...

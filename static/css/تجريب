@@ -1,0 +1,62 @@
+<!-- Hero Section -->
+<section id="home" class="hero" style="min-height: 100vh; display: flex; align-items: center; padding: 100px 0 50px 0;">
+    <div class="container"
+        style="width: 100%; max-width: 1100px; margin: 0 auto 30px auto; padding: 30px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px;">
+
+        <!-- الإطار الخارجي الشامل للصفحة الأولى (يتناسب مع ستايل قسم الـ About) -->
+        <div
+            style="background-color: #111827; border: 1px solid #374151; border-radius: 16px; padding: 3rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);">
+
+            <div class="hero-flex-container"
+                style="display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap;">
+
+                <!-- النصوص والوسم والأزرار (من اليسار) -->
+                <div class="hero-text-content"
+                    style="display: inline-block; color: #3b82f6; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.5rem; text-align: left;">
+                    ARTIFICIAL INTELLIGENCE</span>
+
+                    <h1
+                        style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: #f3f4f6; text-align: left;">
+                        Khedr Mohammed</h1>
+                    <p
+                        style="font-size: 1.2rem; font-weight: 600; color: #9ca3af; margin-bottom: 1rem; text-align: left;">
+                        AI Engineer & Python Developer</p>
+                    <p
+                        style="color: #9ca3af; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; text-align: left;">
+                        Passionate about building intelligent machine learning systems, computer vision models, and
+                        developing robust modern web applications with Flask.</p>
+
+                    <!-- الأزرار الثلاثة مصطفة من اليسار -->
+                    <div class="hero-buttons"
+                        style="display: flex; justify-content: flex-start; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#projects" class="btn btn-primary"
+                            style="background-color: #3b82f6; color: white; padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Explore
+                            Projects</a>
+                        <a href="https://github.com" target="_blank" class="btn btn-secondary"
+                            style="background-color: transparent; border: 1px solid #374151; color: #f3f4f6; padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600;"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="#contact" class="btn btn-secondary"
+                            style="background-color: transparent; border: none; color: #f3f4f6; padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Contact</a>
+                    </div>
+                </div>
+
+                <!-- الصورة الدائرية للبروفايل على اليمين داخل الإطار -->
+                <div class="hero-image-content"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 auto;">
+                    <div
+                        style="width: 240px; height: 240px; border-radius: 50%; border: 3px solid #3b82f6; overflow: hidden; box-shadow: 0 0 20px rgba(59,130,246,0.3); display: flex; align-items: center; justify-content: center; background-color: #1f2937;">
+                        <img src="{{ url_for('static', filename='images/AI_IM_AG_E.jpg') }}" alt="Khedr Wissam Mohammed"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <i class="fas fa-brain" style="font-size: 5rem; color: #3b82f6; display: none;"></i>
+                    </div>
+                    <span style="color: #9ca3af; margin-top: 1rem; font-weight: 500; font-size: 0.95rem;">Khedr
+                        Wissam Mohammed</span>
+                </div>
+
+            </div>
+
+        </div> <!-- نهاية الإطار الخارجي للصفحة الأولى -->
+
+    </div>
+</section>

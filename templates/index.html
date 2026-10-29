@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khedr Mohammed | IT Engineering Portfolio</title>
+    <!-- ربط ملف الـ CSS الاحترافي -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* فرض اتجاه اليسار ليمين (LTR) على مستوى الصفحة بالكامل */
+        html,
+        body {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        * {
+            direction: ltr;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        span,
+        a,
+        li,
+        div {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body dir="ltr">
+
+    <!-- Header & Navbar (الشعار الجديد بشكل سطري وزر الثلاث خطوط) -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo-container">
+                <div class="logo-badge">AI</div>
+                <span class="logo-name">Khedr Mohammed</span>
+            </a>
+
+            <!-- زر الثلاث خطوط (Hamburger Menu Toggle) -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- روابط التنقل باللغة الإنجليزية -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero"
+        style="min-height: auto; display: flex; align-items: center; padding: 25px 20px 20px 20px;">
+        <div class="container"
+            style="width: 100%; max-width: 1100px; margin: 0 auto; box-sizing: border-box;padding: 0 20px;">
+
+            <!-- الإطار الخارجي الشامل للصفحة الأولى (أضفنا margin-top لإعطاء مسافة صغيرة من الأعلى) -->
+            <div
+                style="background-color: #111827; border: 1px solid #374151; border-radius: 16px; padding: 2.5rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); margin-top: 40px;">
+
+                <div class="hero-flex-container"
+                    style="display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap;">
+
+                    <!-- النصوص والوسوم والأزرار -->
+                    <div class="hero-text-content" style="flex: 1; min-width: 280px;">
+                        <span
+                            style="display: inline-block; color: #3b82f6; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; font-size: 0.85rem;">
+                            ARTIFICIAL INTELLIGENCE
+                        </span>
+
+                        <h1
+                            style="font-size: 2.8rem; font-weight: 700; margin-bottom: 10px; color: #f3f4f6; text-align: left; line-height: 1.1;">
+                            Khedr Mohammed
+                        </h1>
+
+                        <p
+                            style="font-size: 1.15rem; font-weight: 600; color: #9ca3af; margin-bottom: 12px; text-align: left;">
+                            AI Engineer & Python Developer
+                        </p>
+
+                        <p
+                            style="color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; text-align: left;">
+                            Passionate about building intelligent machine learning systems, computer vision models, and
+                            developing robust modern web applications with Flask.
+                        </p>
+
+                        <!-- الأزرار الثلاثة -->
+                        <div class="hero-buttons"
+                            style="display: flex; justify-content: flex-start; gap: 1rem; flex-wrap: wrap;">
+                            <a href="#projects" class="btn btn-primary"
+                                style="background-color: #3b82f6; color: white; padding: 0.65rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+                                Projects
+                            </a>
+                            <a href="https://github.com/Khedr-Mohammed" target="_blank" class="btn btn-secondary"
+                                style="background-color: transparent; border: 1px solid #374151; color: #f3f4f6; padding: 0.65rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#contact" class="btn btn-secondary"
+                                style="background-color: transparent; border: none; color: #f3f4f6; padding: 0.65rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- الصورة الدائرية للبروفايل على اليمين داخل الإطار -->
+                    <div class="hero-image-content"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 auto;">
+                        <div
+                            style="width: 220px; height: 220px; border-radius: 50%; border: 3px solid #3b82f6; overflow: hidden; box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); background-color: #0b0f19;">
+                            <img src="{{ url_for('static', filename='images/AI_IM_AG_E.jpg') }}"
+                                alt="Khedr Wissam Mohammed" style="width: 100%; height: 100%; object-fit: cover;"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-brain"
+                                style="font-size: 5rem; color: #3b82f6; display: none; line-height: 220px;"></i>
+                        </div>
+                        <span style="color: #9ca3af; margin-top: 12px; font-weight: 500; font-size: 0.9rem;">
+                            Khedr Wissam Mohammed
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="section" style="padding: 5rem 0;">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; text-align: left;">
+
+            <!-- الإطار الخارجي الشامل لقسم الـ About -->
+            <div
+                style="background-color: #111827; border: 1px solid #374151; border-radius: 16px; padding: 3rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);">
+
+                <span
+                    style="display: inline-block; color: #3b82f6; font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;letter-spacing: 4px;">About
+                </span>
+                <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem; color: #f3f4f6;">Khedr Mohammed
+                </h2>
+
+                <p
+                    style="font-size: 1.1rem; line-height: 1.8; color: #9ca3af; margin-bottom: 2.5rem; max-width: 900px;">
+                    Fifth-year Information Technology Engineering student at Latakia University, specialized in
+                    Artificial Intelligence. Passionate about building intelligent machine learning systems, computer
+                    vision models, medical image processing, and robust Python applications.
+                </p>
+
+                <!-- Grid Cards for About Details (Education, Specialization, Location) داخل الإطار -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+
+                    <!-- Education Card -->
+                    <div
+                        style="background-color: #1f2937; border: 1px solid #374151; padding: 1.75rem; border-radius: 12px; transition: all 0.3s ease;">
+                        <span
+                            style="display: block; font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.5rem;">EDUCATION</span>
+                        <h3 style="font-size: 1.05rem; font-weight: 600; color: #f3f4f6; line-height: 1.5;">
+                            5th Year — Faculty of Information Technology Engineering, Latakia University
+                        </h3>
+                    </div>
+
+                    <!-- Specialization Card -->
+                    <div
+                        style="background-color: #1f2937; border: 1px solid #374151; padding: 1.75rem; border-radius: 12px; transition: all 0.3s ease;">
+                        <span
+                            style="display: block; font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.5rem;">SPECIALIZATiION</span>
+                        <h3 style="font-size: 1.05rem; font-weight: 600; color: #f3f4f6; line-height: 1.5;">
+                            Artificial Intelligence & Machine Learning
+                        </h3>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div
+                        style="background-color: #1f2937; border: 1px solid #374151; padding: 1.75rem; border-radius: 12px; transition: all 0.3s ease;">
+                        <span
+                            style="display: block; font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.5rem;">LOCATION</span>
+                        <h3 style="font-size: 1.05rem; font-weight: 600; color: #f3f4f6; line-height: 1.5;">
+                            Latakia, Syria
+                        </h3>
+                    </div>
+
+                </div>
+
+            </div> <!-- نهاية الإطار الخارجي -->
+
+        </div>
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <!-- البطاقة الكبرى المحيطة بالقسم بأكمله لتطابق باقي الأقسام -->
+                <div class="skills-main-card">
+                    <span class="section-subtitle">S K I L L S</span>
+                    <h2 class="skills-title">Technical Skills</h2>
+
+                    <div class="skills-grid">
+                        <!-- مجموعة مهارات: لغات البرمجة -->
+                        <div class="skill-category-card">
+                            <div class="category-icon"><i class="fas fa-code"></i></div>
+                            <h3>Programming Languages</h3>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>C / C++ (MPI)</span>
+                                <span>JavaScript</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+
+                        <!-- مجموعة مهارات: الذكاء الاصطناعي -->
+                        <div class="skill-category-card">
+                            <div class="category-icon"><i class="fas fa-brain"></i></div>
+                            <h3>AI & Data Science</h3>
+                            <div class="skill-tags">
+                                <span>PyTorch</span>
+                                <span>TensorFlow</span>
+                                <span>Computer Vision</span>
+                                <span>Autoencoders</span>
+                            </div>
+                        </div>
+
+                        <!-- مجموعة مهارات: الأدوات والبيئة -->
+                        <div class="skill-category-card">
+                            <div class="category-icon"><i class="fas fa-tools"></i></div>
+                            <h3>Tools & Environment</h3>
+                            <div class="skill-tags">
+                                <span>Git & GitHub</span>
+                                <span>VS Code</span>
+                                <span>Linux</span>
+                                <span>Virtual Environments</span>
+                            </div>
+                        </div>
+
+                        <!-- مجموعة مهارات: رؤية الكمبيوتر -->
+                        <div class="skill-category-card">
+                            <div class="category-icon"><i class="fas fa-eye"></i></div>
+                            <h3>Computer Vision</h3>
+                            <div class="skill-tags">
+                                <span>OpenCV</span>
+                                <span>Pillow</span>
+                            </div>
+                        </div>
+
+                        <!-- مجموعة مهارات: البيانات -->
+                        <div class="skill-category-card">
+                            <div class="category-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h3>Data</h3>
+                            <div class="skill-tags">
+                                <span>Pandas</span>
+                                <span>Numpy</span>
+                                <span>Matplotlib</span>
+                                <span>Seaborn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section" style="padding: 5rem 0;">
+            <div class="container" style="max-width: 1100px; margin: 0 auto; text-align: left;">
+
+                <!-- إطار خارجي يحمل عنوان القسم -->
+                <div
+                    style="background-color: #0e131f; border: 1px solid #232933; border-radius: 16px; padding: 3rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);">
+
+                    <span
+                        style="display: inline-block; color: #3b82f6; font-size: 0.85rem; font-weight: 700; letter-spacing: 4px; margin-bottom: 0.5rem;">
+                        PROJECTS</span>
+                    <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 2.5rem; color: #f3f4f6;">PYTHON
+                        PROJECTS
+                    </h2>
+
+                    <!-- شبكة المشاريع الـ 12 المتجاوبة -->
+                    <div class="projects-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+
+                        {% for project in projects %}
+                        <div class="project-card"
+                            style="background-color: #1f2937; border: 1px solid #374151; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+
+                            <div>
+                                <!-- عنوان المشروع -->
+                                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: #f3f4f6;">{{ project.title
+                                    }}
+                                </h3>
+
+                                <!-- الوصف -->
+                                <p style="color: #9ca3af; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                                    {{
+                                    project.description }}</p>
+
+                                <!-- الأزرار الملونة للأدوات المستخدمة (Tech Stack) -->
+                                <div class="project-tags"
+                                    style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                    {% for tag in project.tech_stack %}
+                                    <span
+                                        style="background-color: rgba(59, 130, 246, 0.15); color: #38bdf8; border: 1px solid rgba(59, 130, 246, 0.3); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500;">
+                                        {{ tag }}
+                                    </span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div>
+                                <!-- صورة معاينة المشروع -->
+                                <div
+                                    style="width: 100%; height: 160px; border-radius: 8px; overflow: hidden; border: 1px solid #374151; margin-bottom: 1.5rem; background-color: #111827;">
+                                    <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}"
+                                        style="width: 100%; height: 100%; object-fit: cover;"
+                                        onerror="this.style.display='none';">
+                                </div>
+
+                                <!-- زر التوجه إلى غيت هاب -->
+                                <a href="{{ project.github_url }}" target="_blank"
+                                    style="display: inline-flex; align-items: center; gap: 0.5rem; color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s ease;">
+                                    <i class="fab fa-github" style="font-size: 1.1rem;"></i> View on GitHub
+                                </a>
+                            </div>
+
+                        </div>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- GitHub Stats Section -->
+        <section id="github-stats" class="github-stats-section">
+            <div class="container"
+                style="width: 100%; max-width: 1100px; margin: 0 auto; box-sizing: border-box;padding: 0 20px;">
+                <!-- تم وضع المحتوى بالكامل داخل بطاقة رئيسية تحمل نفس إطار بطاقات موقعك -->
+                <div class="github-main-card">
+                    <span class="section-subtitle" style="letter-spacing: 4px;color: #3b82f6;">EXPLORE MY GITHUB</span>
+                    <h2 class="github-username">
+                        <a href="https://github.com/Khedr-Mohammed" target="_blank">github.com/Khedr-Mohammed</a>
+                    </h2>
+
+                    <div class="stats-grid">
+                        <div class="stat-sub-card">
+                            <span class="stat-label">PUBLIC REPOSITORIES</span>
+                            <span class="stat-number">12</span>
+                        </div>
+
+                        <div class="stat-sub-card">
+                            <span class="stat-label">PROJECTS</span>
+                            <span class="stat-number">12</span>
+                        </div>
+
+                        <div class="stat-sub-card">
+                            <span class="stat-label">LANGUAGES SEEN ON GITHUB</span>
+                            <span class="stat-languages">Python • C / C++ • JavaScript • SQL</span>
+                        </div>
+                    </div>
+
+                    <p class="stats-note">Counts below come from the public GitHub profile.</p>
+
+                    <div class="github-btn-container">
+                        <a href="https://github.com/Khedr-Mohammed" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> Open GitHub profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container"
+                style="width: 100%; max-width: 1100px; margin: 0 auto; box-sizing: border-box;padding: 0 20px;">
+                <!-- البطاقة الرئيسية المحيطة بالقسم بأكمله -->
+                <div class="contact-main-card">
+                    <span class="section-subtitle">C O N T A C T</span>
+                    <h2 class="contact-title">Contact</h2>
+                    <p class="contact-description">Email, LinkedIn, and GitHub.</p>
+
+                    <div class="contact-grid">
+                        <!-- بطاقة البريد الإلكتروني -->
+                        <a href="mailto:your-email@example.com" class="contact-sub-card" target="_blank">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">khedr0657@gmail.com</span>
+                        </a>
+
+                        <!-- بطاقة لينكد إن -->
+                        <a href="https://linkedin.com" class="contact-sub-card" target="_blank">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/Khedr-Mohammed</span>
+                        </a>
+
+                        <!-- بطاقة جيت هاب -->
+                        <a href="https://github.com/Khedr-Mohammed" class="contact-sub-card" target="_blank">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/Khedr-Mohammed</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Khedr Mohammed. All rights reserved. Crafted with passion for IT Engineering.</p>
+        </footer>
+
+        <!-- JavaScript لتفعيل تفاعل قائمة الثلاث خطوط -->
+        <script>
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenu.classList.toggle('is-active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenu.classList.remove('is-active');
+                });
+            });
+        </script>
+</body>
+
+</html>
